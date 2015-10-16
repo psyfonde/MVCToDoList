@@ -1,5 +1,7 @@
 package androiddev.akp.mvctodolist.model;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +54,7 @@ public class TaskContainer implements Observable {
     @Override
     public void notify(TaskContainer tasks) {
         for (OnChangeEventListener listener : listeners){
+            Log.i("__TaskContainer", "listeners notified");
             listener.onChange(null);
         }
     }

@@ -54,13 +54,13 @@ public class TaskView extends RelativeLayout implements OnChangeEventListener {
         adapter = new ArrayAdapter<>(getContext(), R.layout.list_view_black_text, tasks.getAll());
         listView.setAdapter(adapter);
 
-        Log.i("__onFinishInflate", "view components init");
+        Log.i("__TaskView", "view components init");
 
         btnAddTask.setOnClickListener(new TaskView.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Log.i("__onClickListener","buttonClicked");
+                Log.i("__TaskView","buttonClicked");
                 taskViewListener.onAddTask(editText.getText().toString());
             }
         });
@@ -74,7 +74,7 @@ public class TaskView extends RelativeLayout implements OnChangeEventListener {
 
     private void updateView() {
         adapter.notifyDataSetChanged();
-        Log.i("__updateView", "view updated");
+        Log.i("__TaskView", "view updated");
     }
 
 }

@@ -51,7 +51,7 @@ public class MyTasks extends AppCompatActivity {
     private TaskView.TaskViewListener taskViewListener = new TaskView.TaskViewListener() {
         @Override
         public void onAddTask(String text) {
-            Log.i("__Activity_viewListener", "buttonEvent handled");
+            Log.i("__Activity", "buttonEvent handled");
             tasks.addTask(new Task(text));
             //TODO reset edit field
         }
