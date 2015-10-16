@@ -2,6 +2,7 @@ package androiddev.akp.mvctodolist.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,8 +51,9 @@ public class MyTasks extends AppCompatActivity {
     private TaskView.TaskViewListener taskViewListener = new TaskView.TaskViewListener() {
         @Override
         public void onAddTask(String text) {
+            Log.i("__Activity_viewListener", "buttonEvent handled");
             tasks.addTask(new Task(text));
-            //reset edit field
+            //TODO reset edit field
         }
     };
 }
